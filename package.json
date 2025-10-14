@@ -1,0 +1,21 @@
+{
+  "name": "dcb-5322-eventai",
+  "version": "1.0.0",
+  "description": "Full-stack web application for event management",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && cd backend && npm install && cd \"../frontend/Create Wireframe from Image\" && npm install",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd \"frontend/Create Wireframe from Image\" && npm run dev",
+    "build": "cd \"frontend/Create Wireframe from Image\" && npm run build",
+    "test": "npm run test:backend",
+    "test:backend": "cd backend && npm test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

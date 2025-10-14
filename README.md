@@ -44,53 +44,44 @@ git clone https://github.com/jacksonians/DCB-5322-EventAI.git
 cd DCB-5322-EventAI
 ```
 
-2. Install backend dependencies
+2. Install all dependencies (root, backend, and frontend)
 ```bash
-cd backend
-npm install
+npm run install:all
 ```
 
-3. Install frontend dependencies
-```bash
-cd ../frontend
-npm install
-```
-
-4. Set up environment variables
+3. Set up environment variables
 ```bash
 # Copy example env files
 cp backend/.env.example backend/.env
-cp frontend/.env.example frontend/.env
+cp "frontend/Create Wireframe from Image/.env.example" "frontend/Create Wireframe from Image/.env"
 ```
 
-5. Start the database (using Docker)
+4. Start the database (using Docker)
 ```bash
 docker-compose up -d
 ```
 
-6. Run database migrations
+5. Run database migrations
 ```bash
 cd backend
 npm run migrate
 ```
 
-7. Start the development servers
-
-Backend:
+6. Start both development servers
 ```bash
-cd backend
+# From the root directory
 npm run dev
 ```
 
-Frontend (in a new terminal):
-```bash
-cd frontend
-npm start
-```
+This will start:
+- **Backend API** at `http://localhost:5001`
+- **Frontend** at `http://localhost:3000` (or 3001 if 3000 is in use)
 
 ## API Documentation
 
-API endpoints will be available at `http://localhost:5000/api`
+API endpoints will be available at `http://localhost:5001/api`
+
+Health check: `http://localhost:5001/api/health`
 
 ## Contributing
 
