@@ -22,6 +22,7 @@ import { VendorMarketplacePage } from "./components/VendorMarketplacePage";
 import { SingleEventPage } from "./components/SingleEventPage";
 import { LoginPage } from "./components/LoginPage";
 import { PreferencesPage } from "./components/PreferencesPage";
+import { PasswordResetPage } from "./components/PasswordResetPage";
 
 type PageType =
   | "home"
@@ -30,7 +31,8 @@ type PageType =
   | "vendors"
   | "event"
   | "login"
-  | "preferences";
+  | "preferences"
+  | "password-reset";
 
 export default function App() {
   const [currentPage, setCurrentPage] =
@@ -196,6 +198,8 @@ export default function App() {
     switch (currentPage) {
       case "login":
         return <LoginPage onNavigate={handleNavigate} />;
+      case "password-reset":
+        return <PasswordResetPage onNavigate={handleNavigate} />;
       case "preferences":
         return <PreferencesPage onNavigate={handleNavigate} />;
       case "event-ai":
@@ -220,7 +224,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-amber-50 p-4">
-      {currentPage !== "login" && currentPage !== "preferences" && renderHeader()}
+      {currentPage !== "login" && currentPage !== "preferences" && currentPage !== "password-reset" && renderHeader()}
       {renderCurrentPage()}
     </div>
   );

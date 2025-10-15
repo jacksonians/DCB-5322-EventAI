@@ -4,11 +4,11 @@
   "description": "Full-stack web application for event management",
   "private": true,
   "scripts": {
-    "install:all": "npm install && cd backend && npm install && cd \"../frontend/Create Wireframe from Image\" && npm install",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend/mainpage && npm install",
     "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
     "dev:backend": "cd backend && npm run dev",
-    "dev:frontend": "cd \"frontend/Create Wireframe from Image\" && npm run dev",
-    "build": "cd \"frontend/Create Wireframe from Image\" && npm run build",
+    "dev:frontend": "cd frontend/mainpage && npm run dev",
+    "build": "cd frontend/mainpage && npm run build",
     "test": "npm run test:backend",
     "test:backend": "cd backend && npm test"
   },

@@ -50,6 +50,14 @@ The Vite dev server is configured to proxy API requests to the backend:
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 
+## Authentication
+
+The application includes a complete authentication system with login and password reset functionality. See [AUTHENTICATION.md](./AUTHENTICATION.md) for detailed documentation on:
+- Login page with email/password
+- Multi-step password reset flow
+- Form validation and error handling
+- Backend API integration guide
+
 ## Project Structure
 
 ```

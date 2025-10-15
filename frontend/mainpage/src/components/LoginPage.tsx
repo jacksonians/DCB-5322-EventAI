@@ -271,7 +271,11 @@ export function LoginPage({ onNavigate }: LoginPageProps) {
                 <input type="checkbox" className="rounded border-gray-300" />
                 Remember me
               </label>
-              <button type="button" className="text-sm text-blue-600 hover:underline">
+              <button 
+                type="button" 
+                onClick={() => onNavigate('password-reset')}
+                className="text-sm text-blue-600 hover:underline"
+              >
                 Forgot password?
               </button>
             </div>
